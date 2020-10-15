@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 // font-awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCamera, faRandom } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faRandom, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import useCamera from '../../hooks/useCamera';
 // style
 import './style.scss';
@@ -22,21 +22,30 @@ const TakePicture: React.FC = () => {
             <video ref={videoRef} className="w-100 mt-5">
                 <track default kind="captions" srcLang="en" />
             </video>
-
-            <Row>
-                <Col className="text-center mt-5">
-                    <p>Press the button to preview the image</p>
-                    <Button variant="info" className="btn" onClick={getPicture}>
-                        <FontAwesomeIcon icon={faCamera} size="2x" />
+            <div className="text-center my-5">
+                <p className="">Press the button to preview the image</p>
+                <Row className="d-flex justify-content-center row">
+                    <Button variant="info" className="btn mx-3" onClick={getPicture}>
+                        <FontAwesomeIcon icon={faCamera} />
                     </Button>
-                    <Button variant="info" className="btn w-50 d-flex align-items-center" onClick={getPicture}>
-                        <p>Change Camera</p>
-                        <FontAwesomeIcon icon={faRandom} size="1x" />
+                    <Button variant="info" className="btn d-flex align-items-center mx-3" onClick={getPicture}>
+                        <FontAwesomeIcon icon={faRandom} />
+                        <p className="m-0 px-3">Switch Camera</p>
                     </Button>
-                </Col>
-            </Row>
-            <h5>Image Preview</h5>
-            <canvas ref={canvasRef} />
+                </Row>
+            </div>
+            <h2 className="text-center m-0">Preview Image</h2>
+            <div className="text-center d-flex flex-column">
+                <canvas ref={canvasRef} className="w-100 mb-5" />
+                <Button
+                    variant="info"
+                    className="btn d-flex align-items-center justify-content-center mx-3"
+                    onClick={getPicture}
+                >
+                    <p className="m-0 px-3">Send</p>
+                    <FontAwesomeIcon icon={faPaperPlane} />
+                </Button>
+            </div>
         </Container>
     );
 };

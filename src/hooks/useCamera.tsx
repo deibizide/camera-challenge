@@ -40,7 +40,7 @@ const useCamera = (parameters: Parameters): { getPicture: () => void; imageSrc: 
                 video.current.play();
             })
             .catch(err => {
-                console.log(`An error occurred: ${err}`);
+                alert(`An error occurred: ${err}`);
             });
 
         video.current.addEventListener('canplay', () => {

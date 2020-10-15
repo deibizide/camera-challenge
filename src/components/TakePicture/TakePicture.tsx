@@ -25,7 +25,7 @@ const TakePicture: React.FC = () => {
             <div className="text-center my-5">
                 <p className="">Press the button to preview the image</p>
                 <Row className="d-flex justify-content-center row">
-                    <Button variant="info" className="btn mx-3" onClick={getPicture}>
+                    <Button variant="info" className="btn mx-3" onClick={(): void => getPicture()}>
                         <FontAwesomeIcon icon={faCamera} />
                     </Button>
                     <Button variant="info" className="btn d-flex align-items-center mx-3" onClick={getPicture}>

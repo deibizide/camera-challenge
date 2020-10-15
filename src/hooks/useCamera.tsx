@@ -8,6 +8,7 @@ interface Parameters {
 const useCamera = (parameters: Parameters): { getPicture: () => void; imageSrc: string } => {
     const [imageSrc, setImageSrc] = useState('');
     const [isStreaming, setisStreaming] = useState(false);
+    // const [useFrontCamera, setUseFrontCamera] = useState(false);
     const video = parameters.videoRef;
     const canvas = parameters.canvasRef;
     const WIDTH = 320;

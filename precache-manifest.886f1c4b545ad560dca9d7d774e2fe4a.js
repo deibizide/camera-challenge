@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "adb1a6e288ccf5ce3ed36a689c5cb7ee",
+    "revision": "fbf3ad0212d7bd606939c59e9b969021",
     "url": "/camera-challenge/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/camera-challenge/static/css/2.2a86faee.chunk.css"
   },
   {
-    "revision": "c31e2abf231a8a9f9ceb",
+    "revision": "674354501d1e3d16560f",
     "url": "/camera-challenge/static/css/main.b81531fe.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/camera-challenge/static/js/2.92aaf228.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c31e2abf231a8a9f9ceb",
-    "url": "/camera-challenge/static/js/main.17907178.chunk.js"
+    "revision": "674354501d1e3d16560f",
+    "url": "/camera-challenge/static/js/main.fa4dd824.chunk.js"
   },
   {
     "revision": "cdc9fde38ee1445c4fe7",

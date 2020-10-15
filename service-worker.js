@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/camera-challenge/precache-manifest.04fb820e53f28c8138c8c7097ef9431f.js"
+  "/camera-challenge/precache-manifest.886f1c4b545ad560dca9d7d774e2fe4a.js"
 );
 
 self.addEventListener('message', (event) => {

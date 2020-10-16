@@ -46,7 +46,5 @@
       let isIOS = /(ipad|iphone|ipod|mac)/g.test(navigator.userAgent.toLowerCase());
       let manifest = document.getElementById("manifest");
       if (isIOS) manifest.href = '%PUBLIC_URL%/manifest-ios.json'
-      console.log('isIOS', isIOS);
-      console.log('manifest', manifest);
   </script>
 </html>

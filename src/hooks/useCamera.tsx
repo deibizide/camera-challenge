@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Dispatch } from 'react';
 
 interface Parameters {
     canvasRef: any;
     videoRef: any;
 }
 
-const useCamera = (parameters: Parameters): { getPicture: () => void; imageSrc: string } => {
+const useCamera = (parameters: Parameters): { getPicture: () => void; imageSrc: string; switchCamera: () => void } => {
     const [imageSrc, setImageSrc] = useState('');
     const [isStreaming, setisStreaming] = useState(false);
-    // const [useFrontCamera, setUseFrontCamera] = useState(false);
+    const [useFrontCamera, setUseFrontCamera] = useState(false);
     const video = parameters.videoRef;
     const canvas = parameters.canvasRef;
     const WIDTH = 320;
@@ -16,6 +16,7 @@ const useCamera = (parameters: Parameters): { getPicture: () => void; imageSrc: 
 
     const constraints = {
         video: {
+            facingMode: '',
             width: {
                 min: 1280,
                 ideal: 1920,
@@ -27,6 +28,11 @@ const useCamera = (parameters: Parameters): { getPicture: () => void; imageSrc: 
                 max: 1440,
             },
         },
+    };
+
+    const switchCamera = (): void => {
+        setUseFrontCamera(!useFrontCamera);
+        constraints.video.facingMode = useFrontCamera ? 'user' : 'environment';
     };
 
     const startCamera = (): void => {
@@ -64,7 +70,7 @@ const useCamera = (parameters: Parameters): { getPicture: () => void; imageSrc: 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    return { getPicture, imageSrc };
+    return { getPicture, imageSrc, switchCamera };
 };
 
 export default useCamera;

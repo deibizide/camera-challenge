@@ -15,7 +15,7 @@ const TakePicture: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
 
-    const { getPicture } = useCamera({ canvasRef, videoRef });
+    const { getPicture, switchCamera } = useCamera({ canvasRef, videoRef });
 
     return (
         <Container className="take-picture__container">
@@ -28,7 +28,11 @@ const TakePicture: React.FC = () => {
                     <Button variant="info" className="btn mx-3" onClick={(): void => getPicture()}>
                         <FontAwesomeIcon icon={faCamera} />
                     </Button>
-                    <Button variant="info" className="btn d-flex align-items-center mx-3" onClick={getPicture}>
+                    <Button
+                        variant="info"
+                        className="btn d-flex align-items-center mx-3"
+                        onClick={(): void => switchCamera()}
+                    >
                         <FontAwesomeIcon icon={faRandom} />
                         <p className="m-0 px-3">Switch Camera</p>
                     </Button>

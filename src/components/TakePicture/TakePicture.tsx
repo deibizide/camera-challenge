@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 // font-awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera, faRandom, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+// hooks
 import useCamera from '../../hooks/useCamera';
 // style
 import './style.scss';
